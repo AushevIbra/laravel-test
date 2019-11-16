@@ -36,7 +36,7 @@
                             <div class="card-header">{{$childMessage->user->name}}</div>
 
                             <div class="card-body">
-                                <img src="{{$message->img}}" class="img-thumbnail"> <br>
+                                <img src="{{$childMessage->img}}" class="img-thumbnail"> <br>
                                 {{$childMessage->text}}
                             </div>
                         </div>
