@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('messages', 'MessageController')->only([
+    'store',
+])->middleware('auth');
+
